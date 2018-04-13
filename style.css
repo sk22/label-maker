@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+.controls textarea {
+  width: 100%;
+  height: 10rem;
+}
+
+.note {
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+.output * {
+  margin: 0;
+  padding: 0;
+}
+
+.output {
+  display: flex;
+  margin-top: 1rem;
+  flex-flow: row wrap;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: .02cm solid #aaa;
+  border: .02cm solid #aaa;
+  font-size: .45cm;
+  padding: .5cm;
+  width: 7cm;
+  page-break-inside: avoid;
+}
+
+.main {
+  flex: 1;
+}
+
+.number::before {
+  display: inline;
+  content: "# ";
+}
+
+.number {
+  font-size: .7cm;
+  font-weight: 300;
+  margin-bottom: .3cm;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.row + .row {
+  margin-top: .3cm;
+}
+
+
+.row__icon {
+  color: #333;
+}
+
+.row__content {
+  margin-top: .06cm;
+  margin-left: .2cm;
+}
+
+.owner__text {
+  margin-left: .1cm;
+}
+
+
+.footer {
+  margin-top: .5cm;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: .3cm;
+}
+
+.footer__credit {
+  flex: 1;
+}
+
+.footer-row + .footer-row::before {
+  display: "inline-block";
+  content: " - ";
+}
+
+.footer__icon {
+  font-size: .45cm;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+  .controls {
+    display: none;
+  }
+}
